@@ -29,3 +29,4 @@ Uses normalized files produced by ***auto_normalized.R***. Creates bar graphs "a
 Creates "{**tissue name**}_sets.txt" for every tissue in a directory "ad_sets" and "all_sets".
 - Needs normalized files produced by ***auto_normalized.R***
 - Needs "supplementaryfile.xlsx" to be located in the "data" directory
+- Each line of the sets file represents an age group. Line 1 contains switching genes at ages 30-39. Line 2 contains switching genes at ages 40-49, and so on.
