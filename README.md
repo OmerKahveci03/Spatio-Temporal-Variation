@@ -2,7 +2,8 @@
 Below are the R scripts available, along with a step by step explanation of how to compile them.
 
 ## Prerequisites
-Download the raw tissue data from the gtex database, and leave it in a local directory named "data". File path: \data
+- Download the raw tissue data from the gtex database, and leave it in a local directory named "data". File path: \data
+- Download the supplementary file located in "data" as well. It is needed for **auto_threshhold_ad.R**
 
 ## Scripts
 ### auto_normalized.R
@@ -12,6 +13,7 @@ Download the raw tissue data from the gtex database, and leave it in a local dir
 Uses normalized files produced by ***auto_normalized.R***. Creates a "plot_{**tissue name**}.png" file for every tissue, in a directory named "plots". File path: \plots
 - The plots are # of switching genes x ***t*** value
 
-### auto_thresholdh_ad.R
+### auto_threshhold_ad.R
 Uses normalized files produced by ***auto_normalized.R***. Creates a "plot_{**tissue name**}.png" file for every tissue, in a directory named "AD" in the "plots" directory. File path: \plots\AD.
 - The plots are # of switching genes x ***t*** value, but only for the top 500 AD genes
+- Needs "supplementaryfile.xcsl" to be located in the "data" directory
