@@ -3,17 +3,29 @@ Below are the R scripts available, along with a step by step explanation of how 
 
 ## Prerequisites
 - Download the raw tissue data from the gtex database, and leave it in a local directory named "data". File path: \data
-- Download the supplementary file "supplementaryfile.xlsx" located in "data" directory as well. It is needed for **auto_threshhold_ad.R**
+- Download the supplementary file "supplementaryfile.xlsx" located in "data" directory as well. It is needed for all scripts that distinguish between AD genes and non-AD genes
 
 ## Scripts
 ### auto_normalized.R
 **This is the first script you should run**. Will create "normalized_{**tissue name**}.txt" and "normalized_{**tissue name**}.xlsx" for every tissue, in a directory named "output". File path: \output
 
 ### auto_threshhold.R
-Uses normalized files produced by ***auto_normalized.R***. Creates a "plot_{**tissue name**}.png" file for every tissue, in a directory named "plots". File path: \plots
+Creates a "plot_{**tissue name**}.png" file for every tissue, in a directory named "plots". File path: \plots
+- Uses normalized files produced by ***auto_normalized.R***.
 - The plots are # of switching genes x ***t*** value
 
 ### auto_threshhold_ad.R
-Uses normalized files produced by ***auto_normalized.R***. Creates a "plot_{**tissue name**}.png" file for every tissue, in a directory named "AD" in the "plots" directory. File path: \plots\AD.
+Creates a "plot_{**tissue name**}.png" file for every tissue, in a directory named "AD" in the "plots" directory. File path: \plots\AD
+- Needs normalized files produced by ***auto_normalized.R***
+- Needs "supplementaryfile.xlsx" to be located in the "data" directory
 - The plots are # of switching genes x ***t*** value, but only for the top 500 AD genes
+
+### auto_bargraph.R
+Uses normalized files produced by ***auto_normalized.R***. Creates bar graphs "ad_{**tissue name**}_bargraph_t0.5.png" and "all_{**tissue name**}_bargrapht0.5.png" in a directory named "graphs". File path: \graphs
+- Needs "supplementaryfile.xlsx" to be located in the "data" directory
+- t value can be configured on line 12 of the script to be any number between 0 and 1. The name of the files produced will change accordingly.
+
+### auto_sets.R
+Creates "{**tissue name**}_sets.txt" for every tissue in a directory "ad_sets" and "all_sets".
+- Needs normalized files produced by ***auto_normalized.R***
 - Needs "supplementaryfile.xlsx" to be located in the "data" directory
