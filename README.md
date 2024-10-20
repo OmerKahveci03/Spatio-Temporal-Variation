@@ -35,4 +35,7 @@ Creates "{**tissue name**}_sets.txt" for every tissue in a directory "ad_sets" a
 Creates "heatmap_ad_age.png", "heatmap_ad_life.png", "heatmap_all_age.png", "heatmap_all_life.png" files in the "heatmaps" directory. File path is \heatmaps
 - Needs sets files produced by ***auto_sets.R***
 
-### 
+### connect.R
+Creates "heatmap_connectivity.png" and "heatmap_connectivity.xlsx" in the "connectivity" directory. File path is \connectivity
+- Needs "9606.protein.links.v12.0.txt" to be located in the "data" directory
+- Needs sets files produced by ***auto_sets.R***
