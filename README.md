@@ -4,6 +4,7 @@ Below are the R scripts available, along with a step by step explanation of how 
 ## Prerequisites
 - Download the raw tissue data from the gtex database, and leave it in a local directory named "data". File path: \data
 - Download the supplementary file "supplementaryfile.xlsx" located in "data" directory as well. It is needed for all scripts that distinguish between AD genes and non-AD genes
+- Download "9606.protein.links.v12.0.txt" and store it in the "data" directory
 
 ## Scripts
 ### auto_normalized.R
