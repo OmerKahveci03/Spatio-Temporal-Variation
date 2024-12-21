@@ -40,3 +40,13 @@ Creates "heatmap_ad_age.png", "heatmap_ad_life.png", "heatmap_all_age.png", "hea
 Creates "heatmap_connectivity.png" and "heatmap_connectivity.xlsx" in the "connectivity" directory. File path is \connectivity
 - Needs "9606.protein.links.v12.0.txt" to be located in the "data" directory
 - Needs sets files produced by ***auto_sets.R***
+
+### Ad_Sets and All_Sets
+- Contains a text file for every tissue, containing the switching genes
+- ad_sets contains switching alzhiemers genes, all_sets contains all switching genes.
+- Each line corresponds to an age group. Some lines may be empty, but there will only be up to five.
+  - Line 1: Ages 30-39
+  - Line 2: Ages 40-49
+  - Line 3: Ages 50-59
+  - Line 4: Ages 60-69
+  - Line 5: Ages 70-79
